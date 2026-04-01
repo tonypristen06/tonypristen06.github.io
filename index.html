@@ -3,100 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Của Tôi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <title>Giao Diện Bio Giống Mẫu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body { 
-            font-family: 'Roboto', sans-serif; 
+        body {
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Hình nền */
-            background-image: url('https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg');
-            background-size: cover; 
-            background-attachment: fixed;
-            background-position: center;
+            background-color: #f3e8ff; /* Màu nền tím nhạt */
         }
 
-        /* Khung nội dung chính */
-        .container {
-            background-color: rgba(255, 255, 255, 0.9); /* Trắng mờ để nổi bật trên nền */
-            padding: 40px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            max-width: 500px;
+        .bio-container {
             width: 90%;
+            max-width: 480px; /* Độ rộng tối đa để trông giống điện thoại */
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             text-align: center;
-            backdrop-filter: blur(5px); /* Làm mờ nhẹ nền phía sau khung */
         }
 
-        h1 { 
-            color: #d32f2f; 
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
-
-        p { 
-            color: #444;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
+        /* Phần ảnh đại diện */
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #eee;
         }
 
-        /* Nút liên hệ */
-        .btn-facebook {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #1877f2;
-            color: white;
+        h1 {
+            font-size: 1.4rem;
+            margin: 0 0 5px;
+            font-weight: 600;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Group các nút */
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Khoảng cách giữa các nút */
+        }
+
+        /* Style cho mỗi nút liên kết */
+        .bio-link {
+            display: block;
+            padding: 18px;
+            background-color: #f0fdf4; /* Màu nền xanh lá siêu nhạt */
+            color: #1d1d1f;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            position: relative;
         }
 
-        .btn-facebook:hover {
-            background-color: #145dbf;
-            transform: translateY(-3px); /* Nhảy nhẹ lên trên */
-            box-shadow: 0 6px 15px rgba(24, 119, 242, 0.4);
+        /* Hiệu ứng khi di chuột vào nút */
+        .bio-link:hover {
+            background-color: #dcfce7; /* Xanh lá đậm hơn một chút */
+            transform: scale(1.02);
         }
 
-        .btn-facebook:active {
-            transform: translateY(-1px);
+        /* Thêm dấu 3 chấm nhỏ ở góc phải (cho giống mẫu) */
+        .bio-link::after {
+            content: "⋮";
+            position: absolute;
+            right: 20px;
+            color: #ccc;
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Chào mừng bạn!</h1>
-        <p>Đây là trang web đầu tiên mình tự tay xây dựng và deploy. Rất vui được làm quen với mọi người!</p>
-        
-        <img src="https://via.placeholder.com/150" alt="Ảnh đại diện" class="profile-img">
-        
-        <br>
-        
-        <a href="https://facebook.com/ITZYCrusher" target="_blank" class="btn-facebook">
-            Kết nối qua Facebook
-        </a>
+    <div class="bio-container">
+        <img src="https://via.placeholder.com/100" alt="Avatar" class="profile-img">
+        <h1>anesilia</h1>
+        <p class="tagline">vibing and chilling</p>
+
+        <div class="links-group">
+            <a href="#" target="_blank" class="bio-link">VLR.gg</a>
+            <a href="#" target="_blank" class="bio-link">Valorant Tracker</a>
+            <a href="#" target="_blank" class="bio-link">Twitter</a>
+            <a href="#" target="_blank" class="bio-link">Instagram</a>
+            <a href="#" target="_blank" class="bio-link">Telegram</a>
+            <a href="#" target="_blank" class="bio-link">Twitch</a>
+            <a href="#" target="_blank" class="bio-link">Youtube</a>
+        </div>
     </div>
 
 </body>
